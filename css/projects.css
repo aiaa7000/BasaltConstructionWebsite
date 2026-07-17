@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+/* ==========================================
+   Projects
+========================================== */
+
+.projects {
+    padding: var(--spacing-section) 0;
+    background-color: var(--color-white);
+}
+
+/* ==========================================
+   Layout
+========================================== */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-xl);
+}
+
+/* ==========================================
+   Card
+========================================== */
+
+.project-card {
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-md);
+    transition:
+        transform var(--animation-duration-base) var(--animation-easing),
+        box-shadow var(--animation-duration-base) var(--animation-easing);
+}
+
+/* ==========================================
+   Image
+========================================== */
+
+.project-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+}
+
+/* ==========================================
+   Content
+========================================== */
+
+.project-content {
+    padding: var(--spacing-lg);
+}
+
+.project-title {
+    margin-bottom: var(--spacing-sm);
+}
+
+.project-location {
+    color: var(--color-text-light);
+}
+
+/* ==========================================
+   Hover
+========================================== */
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}

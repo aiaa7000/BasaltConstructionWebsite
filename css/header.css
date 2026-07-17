@@ -1,0 +1,222 @@
+@charset "UTF-8";
+
+/* ==========================================
+   Header
+========================================== */
+
+.header {
+    position: fixed;
+    inset: 0 0 auto 0;
+
+    z-index: var(--z-header);
+
+    background-color: transparent;
+
+    transition:
+        background-color var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+/* ==========================================
+   Header Scroll State
+========================================== */
+
+.header.is-scrolled {
+    background-color: rgba(30, 30, 30, 0.95);
+
+    backdrop-filter: blur(12px);
+
+    box-shadow: var(--shadow-md);
+}
+
+/* ==========================================
+   Header Layout
+========================================== */
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 5rem;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+
+    gap: var(--spacing-xl);
+}
+
+/* ==========================================
+   Brand Logo
+========================================== */
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    text-decoration: none;
+}
+
+.logo img {
+    display: block;
+
+    height: 3rem;
+    width: auto;
+
+    object-fit: contain;
+}
+
+/* ==========================================
+   Language Switcher
+========================================== */
+
+.language-switcher {
+    position: relative;
+}
+
+.dropdown-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+
+    padding:
+        var(--spacing-sm)
+        var(--spacing-md);
+
+    border: 1px solid transparent;
+    border-radius: var(--radius-md);
+
+    background-color: transparent;
+
+    color: var(--color-white);
+
+    cursor: pointer;
+
+    transition:
+        background-color var(--transition-base),
+        border-color var(--transition-base),
+        color var(--transition-base);
+}
+
+.dropdown-trigger:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.dropdown-icon {
+    width: 0.875rem;
+    height: 0.875rem;
+
+    transition: transform var(--transition-base);
+}
+
+/* ==========================================
+   Dropdown
+========================================== */
+
+.dropdown-menu {
+    position: absolute;
+
+    top: calc(100% + var(--spacing-sm));
+    right: 0;
+
+    min-width: 10rem;
+
+    padding: var(--spacing-xs);
+
+    background-color: var(--color-surface);
+
+    border-radius: var(--radius-md);
+
+    box-shadow: var(--shadow-lg);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(.5rem);
+
+    transition:
+        opacity var(--transition-base),
+        visibility var(--transition-base),
+        transform var(--transition-base);
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    padding:
+        var(--spacing-sm)
+        var(--spacing-md);
+
+    border: none;
+    border-radius: var(--radius-sm);
+
+    background: transparent;
+
+    color: var(--color-text);
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background-color var(--transition-base),
+        color var(--transition-base);
+}
+
+.dropdown-item:hover,
+.dropdown-item.is-active {
+    color: var(--color-primary);
+
+    background-color: rgba(200, 155, 60, 0.10);
+}
+
+/* ==========================================
+   Dropdown States
+========================================== */
+
+.language-switcher.is-open .dropdown-menu {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+.language-switcher.is-open .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+/* ==========================================
+   Accessibility
+========================================== */
+
+.navigation-link:focus-visible,
+.dropdown-trigger:focus-visible,
+.dropdown-item:focus-visible {
+    outline: 2px solid var(--color-primary);
+
+    outline-offset: 4px;
+}
+
+/* ==========================================
+   Reduced Motion
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .header,
+    .dropdown-trigger,
+    .dropdown-menu,
+    .dropdown-icon {
+        transition: none;
+    }
+
+}

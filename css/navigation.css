@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+/* ==========================================
+   Navigation
+========================================== */
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.navigation-list {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xl);
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.navigation-item {
+    display: flex;
+}
+
+.navigation-link {
+    display: inline-flex;
+    align-items: center;
+
+    padding: var(--spacing-sm) 0;
+
+    color: var(--color-white);
+
+    font-size: var(--font-size-base);
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition: color var(--transition-base);
+}
+
+.navigation-link:hover,
+.navigation-link.is-active {
+    color: var(--color-primary);
+}

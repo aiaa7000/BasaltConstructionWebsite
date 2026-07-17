@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+/* ==========================================
+   Laptop
+   ≤ 1200px
+========================================== */
+
+@media (max-width: 1200px) {
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* ==========================================
+   Tablet
+   ≤ 992px
+========================================== */
+
+@media (max-width: 992px) {
+
+    .header-container {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+
+    .hero-container {
+        text-align: center;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+}
+
+/* ==========================================
+   Mobile
+   ≤ 768px
+========================================== */
+
+@media (max-width: 768px) {
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .hero-title {
+        font-size: 2.75rem;
+    }
+
+    .services-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card,
+    .project-card {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .hero-actions,
+    .cta-actions {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+}
+
+/* ==========================================
+   Small Mobile
+   ≤ 576px
+========================================== */
+
+@media (max-width: 576px) {
+
+    .container {
+        padding-inline: var(--spacing-md);
+    }
+
+    .hero-title {
+        font-size: 2.25rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo img {
+    height: 48px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+
+    color: white;
+}
+
+.logo-subtitle {
+    font-size: .75rem;
+    letter-spacing: .22em;
+
+    text-transform: uppercase;
+
+    color: var(--color-primary);
+}

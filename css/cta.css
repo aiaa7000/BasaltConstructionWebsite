@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+/* ==========================================
+   CTA
+========================================== */
+
+.cta {
+    padding: var(--spacing-section) 0;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+}
+
+/* ==========================================
+   Content
+========================================== */
+
+.cta-content {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   Typography
+========================================== */
+
+.cta .section-eyebrow,
+.cta .section-title,
+.cta .section-description {
+    color: var(--color-white);
+}
+
+.cta-actions {
+    margin-top: var(--spacing-xl);
+}

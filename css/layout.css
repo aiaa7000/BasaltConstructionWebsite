@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+/* ==========================================
+   Container
+========================================== */
+
+.container {
+    width: min(100% - (var(--container-padding) * 2), var(--max-width));
+
+    margin-inline: auto;
+}
+
+/* ==========================================
+   Section
+========================================== */
+
+.section-header {
+    max-width: 48rem;
+
+    margin-inline: auto;
+    margin-bottom: var(--spacing-3xl);
+
+    text-align: center;
+}
+
+.section-eyebrow {
+    display: inline-block;
+
+    margin-bottom: var(--spacing-md);
+
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    color: var(--color-primary);
+}
+
+.section-title {
+    margin-bottom: var(--spacing-lg);
+}
+
+.section-description {
+    font-size: var(--font-size-lg);
+
+    color: var(--color-text-light);
+}
+
+/* ==========================================
+   Grid
+========================================== */
+
+.services-grid,
+.projects-grid {
+    display: grid;
+
+    gap: var(--spacing-xl);
+}
+
+/* ==========================================
+   Flex Utilities
+========================================== */
+
+.flex-center {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-between {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
